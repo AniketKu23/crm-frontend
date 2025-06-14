@@ -2,14 +2,14 @@ import React from 'react'
 import { Container, Row, Col, Form, Button } from 'react-bootstrap'
 import PropTypes from 'prop-types'
 
-export const ResetPassword = ({handleOnChange, handleOnSubmit,formSwitcher, email}) => {
+export const ResetPassword = ({handleOnChange, handleOnResetSubmit,formSwitcher, email}) => {
   return (
     <Container>
         <Row>
             <Col>
             <h1 className='text-info text-center'>Reset Password</h1>
             <hr />
-            <Form autoComplete='off' onSubmit={handleOnSubmit}>
+            <Form autoComplete='off' onSubmit={handleOnResetSubmit}>
                 <Form.Group>
                     <Form.Label>Email Address</Form.Label>
                     <Form.Control
@@ -39,7 +39,7 @@ export const ResetPassword = ({handleOnChange, handleOnSubmit,formSwitcher, emai
 
 ResetPassword.propTypes = {
   handleOnChange: PropTypes.func.isRequired, 
-  handleOnSubmit: PropTypes.func.isRequired,
+  handleOnResetSubmit: PropTypes.func.isRequired,
   formSwitcher: PropTypes.func.isRequired,
   pass: PropTypes.string.isRequired,
 };
