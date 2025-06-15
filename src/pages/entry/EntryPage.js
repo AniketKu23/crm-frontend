@@ -1,11 +1,11 @@
 import React from 'react'
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import {Jumbotron } from 'react-bootstrap';
 import "./EntryStyle.css"
 import { LoginForm } from '../../components/login/LoginComp';
 import { useState } from 'react';
 import { ResetPassword } from '../../components/password-reset/PasswordResetComp';
-import { use } from 'react';
+// import { use } from 'react';
 
 
 
