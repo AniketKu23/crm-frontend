@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "subject": "Email certificate expired",
+    "status": "Client response pending",
+    "addedAt": "2025-06-14",
+    "history": [
+      {
+        "date": "2025-06-10",
+        "message": "Client reported expired certificate issue.",
+        "messageBy": "client"
+      },
+      {
+        "date": "2025-06-11",
+        "message": "Operator requested certificate details.",
+        "messageBy": "operator"
+      },
+      {
+        "date": "2025-06-12",
+        "message": "Client submitted the required screenshots.",
+        "messageBy": "client"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "subject": "Issue with Email certificate",
+    "status": "Client response pending",
+    "addedAt": "2025-06-14"
+  },
+  {
+    "id": 3,
+    "subject": "Issue: App crashing after login",
+    "status": "Client response pending",
+    "addedAt": "2025-06-14"
+  },
+  {
+    "id": 4,
+    "subject": "SSL certificate not recognized",
+    "status": "Client response pending",
+    "addedAt": "2025-06-14"
+  },
+  {
+    "id": 5,
+    "subject": "Server time mismatch error",
+    "status": "Client response pending",
+    "addedAt": "2025-06-14"
+  },
+  {
+    "id": 6,
+    "subject": "Browser warning about SSL",
+    "status": "Client response pending",
+    "addedAt": "2025-06-14"
+  },
+  {
+    "id": 7,
+    "subject": "TLS handshake timeout",
+    "status": "Client response pending",
+    "addedAt": "2025-06-14"
+  },
+  {
+    "id": 8,
+    "subject": "Renewal issue with wildcard certificate",
+    "status": "Client response pending",
+    "addedAt": "2025-06-14"
+  },
+  {
+    "id": 9,
+    "subject": "Unable to access secure pages",
+    "status": "Client response pending",
+    "addedAt": "2025-06-14"
+  },
+  {
+    "id": 10,
+    "subject": "SSL chain incomplete",
+    "status": "Client response pending",
+    "addedAt": "2025-06-14"
+  }
+]
