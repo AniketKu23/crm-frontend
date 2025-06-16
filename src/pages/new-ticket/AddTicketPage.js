@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Container,Row, Col } from 'react-bootstrap'
 import { PageBreadcrumb } from '../../components/breadcrumb/BreadcrumbComp'
 import { AddTicketForm } from '../../components/add-ticket-form/AddTicketFormComp'
@@ -14,10 +14,12 @@ const initialFormDt = {
 export const AddTicket = () => {
 
     const [frmData,setFrmData] = useState(initialFormDt)
+    useEffect(() => {}, [frmData])
+
     const handleOnChange = e =>{
         const {name, value} = e.target
         setFrmData({
-            ...initialFormDt,
+            ...frmData,
             [name]: value,
         })
     }
@@ -25,7 +27,6 @@ export const AddTicket = () => {
     const handleOnSubmit = e =>{
         e.preventDefualt()
 
-        console.log('Form submit request recieved.')
     }
 
   return (

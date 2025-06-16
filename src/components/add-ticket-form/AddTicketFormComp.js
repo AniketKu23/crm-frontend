@@ -1,19 +1,23 @@
 import React from 'react'
 import { Jumbotron, Form, Button, Row, Col } from 'react-bootstrap'
 import PropTypes from 'prop-types'
+import './add-ticket-formStyle.css'
 
 export const AddTicketForm = ({handleOnSubmit, handleOnChange,frmDt}) => {
-  console.log(frmDt)
     return (
-    <Jumbotron>
+    <Jumbotron className='add-new-ticket mt-3 bg-light'>
+        <h1 className='text-info text-center'>Add New Ticket</h1>
+        <hr />
         <Form autoComplete='off' onSubmit={handleOnSubmit}>
                 <Form.Group as={Row}>
                     <Form.Label column sm={3}>Subject</Form.Label>
-                    <Col>
+                    <Col sm={9}>
                         <Form.Control
                             name="subject"
                             value={frmDt.subject}
                             onChange={handleOnChange}
+                            minLength="3"
+                            maxLength="100"
                             placeholder="Subject"
                             required
                         />
@@ -25,8 +29,8 @@ export const AddTicketForm = ({handleOnSubmit, handleOnChange,frmDt}) => {
                     <Col>
                         <Form.Control
                             type='date'
-                            value={frmDt.issueDate}
                             name="issueDate"
+                            value={frmDt.issueDate}
                             onChange={handleOnChange}
                             required
                         />
@@ -45,13 +49,14 @@ export const AddTicketForm = ({handleOnSubmit, handleOnChange,frmDt}) => {
                     />
                      
                 </Form.Group>
-                <Button type="submit" variant='info' block>Login</Button>
+                <Button type="submit" variant='info' block>Add New Ticket</Button>
             </Form>
     </Jumbotron>
   )
 }
 
-AddTicketForm.propTypes={handleOnSubmit:PropTypes.func.isRequired,
+AddTicketForm.propTypes={
+    handleOnSubmit:PropTypes.func.isRequired,
     handleOnChange:PropTypes.func.isRequired,
     frmDt:PropTypes.object.isRequired,
 }

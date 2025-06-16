@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-// import { Entry } from './pages/entry/EntryPage';
+import { Entry } from './pages/entry/EntryPage';
 import { DefaultLayout } from './layout/DefaultLayout';
 import { Dashboard } from './pages/dashboard/DashboardPage';
 import { AddTicket } from './pages/new-ticket/AddTicketPage';
@@ -12,6 +12,7 @@ function App() {
       <DefaultLayout>
         {/* <Dashboard /> */}
         <AddTicket />
+        
       </DefaultLayout>
     </div>
   );
