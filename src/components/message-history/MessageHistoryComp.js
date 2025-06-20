@@ -19,3 +19,6 @@ export const MessageHistory = ({msg}) => {
 MessageHistory.propTypes = {
     msg : PropTypes.array.isRequired
 }
+
+
+
