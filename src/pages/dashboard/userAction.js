@@ -6,7 +6,7 @@ export const getUserProfile = () => async (dispatch) => {
     dispatch(getUserPending());
 
     const result = await fetchUser();
-
+    console.log("fetchUser result:", result);
     if (result.user && result.user._id)
       return dispatch(getUserSuccess(result.user));
 

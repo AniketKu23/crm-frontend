@@ -8,9 +8,7 @@ export const TicketTable = () => {
   const { searchTicketList, isLoading, error } = useSelector(
     (state) => state.tickets
   );
-
-  if (isLoading) return <h3>Loading...</h3>;
-
+  if (isLoading) return <h3>Loading ...</h3>;
   if (error) return <h3>{error}</h3>;
 
   return (
@@ -20,7 +18,7 @@ export const TicketTable = () => {
           <th>#</th>
           <th>Subjects</th>
           <th>Status</th>
-          <th>Open Date</th>
+          <th>Opened Date</th>
         </tr>
       </thead>
       <tbody>
@@ -32,21 +30,17 @@ export const TicketTable = () => {
                 <Link to={`/ticket/${row._id}`}>{row.subject}</Link>
               </td>
               <td>{row.status}</td>
-              <td>{row.openAt}</td>
+              <td>{row.openAt && new Date(row.openAt).toLocaleString()}</td>
             </tr>
           ))
         ) : (
           <tr>
             <td colSpan="4" className="text-center">
-              No ticket to show
+              No ticket show{" "}
             </td>
           </tr>
         )}
       </tbody>
     </Table>
   );
-};
-
-TicketTable.propTypes = {
-  tickets: PropTypes.array.isRequired,
 };

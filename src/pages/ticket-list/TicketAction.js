@@ -12,7 +12,7 @@ import {
   closeTicketLoading,
   closeTicketSuccess,
   closeTicketFail,
-} from "./ticketSlice";
+} from "../ticket-list/ticketSlice";
 
 import {
   getAllTickets,

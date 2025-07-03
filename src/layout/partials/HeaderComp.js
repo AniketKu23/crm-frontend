@@ -13,12 +13,15 @@ export const Header = () => {
   };
 
   return (
-    <Navbar collapseOnSelect bg="info" variant="dark" expand="md">
+    <Navbar collapseOnSelect bg="info" variant="dark" expand="md" fixed="top">
       <Navbar.Brand>
         <img src={logo} alt="logo" width="50px" />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
+      <Navbar.Collapse
+        id="basic-navbar-nav"
+        style={{ zIndex: 1050, position: "relative" }}
+      >
         <Nav className="ml-auto">
           <LinkContainer to="/dashboard">
             <Nav.Link>Dashboard</Nav.Link>
